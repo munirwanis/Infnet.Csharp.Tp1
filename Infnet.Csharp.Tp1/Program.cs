@@ -5,7 +5,7 @@ namespace Infnet.Csharp.Tp1
 {
     class MainClass
     {
-        private static ISort sort = new BubbleSort();
+        private static Sort sort = new Sort();
         private static Stopwatch stopwatch = new Stopwatch();
 
         public static void Main(string[] args)
@@ -34,7 +34,7 @@ namespace Infnet.Csharp.Tp1
             Debug.WriteLine($"Array de {length} posições");
             Debug.WriteLine(string.Join(",", array));
             stopwatch.Start();
-            sort.Sort(array);
+            sort.BubbleSort(array);
             stopwatch.Stop();
             Debug.WriteLine(string.Join(",", array));
             Debug.WriteLine($"Levou {stopwatch.ElapsedMilliseconds} ms para se ordenar.");

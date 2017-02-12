@@ -1,15 +1,14 @@
-﻿using System;
-namespace Infnet.Csharp.Tp1
+﻿namespace Infnet.Csharp.Tp1
 {
-    public class BubbleSort : ISort
+    public class Sort
     {
-        public int[] Sort(int[] arrayToSort)
+        public void BubbleSort(int[] arrayToSort)
         {
             var changed = true;
             do
             {
                 changed = false;
-                for (int i = 0; i < arrayToSort.Length - 2; i++)
+                for (int i = 0; i < arrayToSort.Length - 1; i++)
                 {
                     if (arrayToSort[i] > arrayToSort[i+1])
                     {
@@ -20,7 +19,6 @@ namespace Infnet.Csharp.Tp1
                     }
                 }
             } while (changed);
-            return arrayToSort;
         }
     }
 }
